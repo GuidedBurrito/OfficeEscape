@@ -16,10 +16,12 @@ def displayIntro():
     time.sleep(2)
     print ('Can you Escape the Office???')
     time.sleep(2)
+    print
     print ('What is your name?')
     print
     Name = raw_input()
     time.sleep(2)
+    return Name
     
 def chooseDeskOption():
     print
@@ -32,12 +34,13 @@ def chooseDeskOption():
     print ('Its a small space but its yours.')
     print ('The boss lets you keep funny pictures on your desk.')
     print ('The weekend is circled on your calendar in red marker.')
-    print ('You have been waiting for this all month.')
+    print ('You have been waiting for this day all month.')
+    time.sleep(8)
     print
     print
     print
     DeskOption = ''
-    while DeskOption != 'Leave' and DeskOption != 'Check':
+    while DeskOption != 'Leave' and DeskOption != 'leave' and DeskOption != 'LEAVE' and DeskOption != 'Check' and DeskOption != 'check' and DeskOption != 'CHECK':
         print ('Your ready to go, do you LEAVE your cubicle or stand up and CHECK? (Leave or Check)')
         print
         DeskOption = raw_input()
@@ -74,12 +77,12 @@ def chooseSpotOption():
     print ('Quietly standing up, you peak over the walls of your cubicle.')
     print ('As you scope out the office you see the boss is making his rounds.')
     print ('He is a couple cubicles away from reaching yours. And then it hits you....')
-    time.sleep(2)
+    time.sleep(5)
     print ('Youve shut your computer down already. If he sees your not doing anything your busted!')
     SpotOption = ''
     while SpotOption != 'Start' and SpotOption != 'START' and SpotOption != 'start' and SpotOption != 'Fax' and SpotOption != 'fax' and SpotOption != 'FAX':
         print ('Do you try and START your computer up again or')
-        print ('grab some usless papers and pretend to FAX them? (Start or Fax')
+        print ('grab some usless papers and pretend to FAX them? (Start or Fax)')
         print
         SpotOption = raw_input()
     return SpotOption
@@ -94,6 +97,7 @@ def chooseLieOption():
     print ('You choose to lie to your boss which is very supprising....')
     time.sleep(2)
     print ('Because your a horrible liar.')
+    time.sleep(3)
     print
     print ('As you blather trip and stumble through your very poor lie,')
     print ('the bosses expression goes from confused to angry.')
@@ -111,6 +115,8 @@ def chooseLieOption():
         print ('wasnt bad enough, hes going to do it infront of the whole office.')
         print ('And like a sharp axe coming down on your head he screams those dredfull words....')
         print ('YOUR FIRED!!!')
+        time.sleep(8)
+        print
         win = False
     else :
         print
@@ -118,10 +124,11 @@ def chooseLieOption():
         print ('You sheepishly tell him no and appologise in hopes that he forgets all of this and moves on.')
         print ('After some short grovilling, he accepts your appology but will now be keeping a close eye on you.')
         print ('There will be no more early weekend for you in the future.')
+        print
         win = False
     return win 
 
-def chooseStretchOption():
+def chooseStretchOption(Name):
     print
     print
     print
@@ -143,6 +150,7 @@ def chooseStretchOption():
         print ('get to leave the office. Unfortunatly between getting to the coffee shop, waiting in line,')
         print ('and travelling back you spend most of the day getting coffee and end up leaving the same')
         print ('time that you alway do')
+        print
         win = False
     else :
         print
@@ -156,10 +164,11 @@ def chooseStretchOption():
         print ('At the creshedo of his rant he tells you not to bother coming in to work on Teusday,')
         print
         print ("You've Been Fired")
+        print
         win = False
     return win
 
-def chooseStartOption(): 
+def chooseStartOption(Name): 
     print
     print
     print
@@ -182,6 +191,7 @@ def chooseStartOption():
         print ('And he baught it! "Well thats really unfortunate ' + Name + ', you must have lost everything!')
         print ('Uh-oh, you know where this is going but have no idea how to stop it')
         print ('"I guess youll need to stay late to catch up eith all that work that you lost"')
+        print
         win = False
     else :
         print
@@ -190,6 +200,7 @@ def chooseStartOption():
         print ('"An update you say" says the boss, "Well thats great! I want you to install this update')
         print ('on everyones system!". Knowing that you have to maintain the lie or else you get fired,')
         print ('you spend the rest of the day pretending to install your imaginary update.')
+        print
         win = False
     return win
 
@@ -202,10 +213,10 @@ def chooseFaxOption():
     print
     print ('Yor franticly search your desk and grab some loose papers.')
     print ('Before you even have time to straighten out the papers the boss peeks inside your cubicle')
-    faxOption = ''
+    FaxOption = ''
     while FaxOption != 'Send' and FaxOption != 'send' and FaxOption != 'SEND' and FaxOption != 'Hope' and FaxOption != 'hope' and FaxOption != 'HOPE':  
         print ('He isnt leaving, do you quickly throw the papers into the fax machine and SEND it to a made up number')
-        print ('or do you organize the papers and HOPE he leaves. (Send or Hope')
+        print ('or do you organize the papers and HOPE he leaves. (Send or Hope)')
         print
         FaxOption = raw_input()
     if FaxOption == 'Send' or FaxOption == 'SEND' or FaxOption == 'send':
@@ -214,6 +225,8 @@ def chooseFaxOption():
         print ('You clamly put all the papers that you collected and placed the in the fax machine.')
         print ('As you begin to enter a random phone number, you look up to see that the boss has moved on')
         print ('Quickly and quietly, you Ninja your way out of the office.')
+        time.sleep(5)
+        print
         win = True
     else :
         print
@@ -222,16 +235,35 @@ def chooseFaxOption():
         print ('As he looks more closly at your papers, he bigins to wonder what you are faxing')
         print ('He asks you to explain what your faxing. Not knowing how to explain yourself,')
         print ('you talk your way into hours of more work')
+        print
         win = False
     return  win
 
 def main():
     
     playAgain = 'yes'
+    Name = displayIntro()
     while playAgain == 'yes' or playAgain == 'y' or playAgain == 'YES':
-        DeskChoice = chooseDeskOption()
-        if Deskoption == 'Leave' or DeskOption == 'leave' or DeskOption == 'LEAVE':
-            HallChoice = chooseHallOption()
+        DeskOption = chooseDeskOption()
+        if DeskOption == 'Leave' or DeskOption == 'leave' or DeskOption == 'LEAVE':
+            HallOption = chooseHallOption()
+            if HallOption == 'Lie' or HallOption == 'lie' or HallOption == 'LIE':
+                win = chooseLieOption()
+            else :
+                win = chooseStretchOption(Name)
+        else:
+            SpotOption = chooseSpotOption()
+            if SpotOption == 'Start' or SpotOption == 'START' or SpotOption == 'start':
+                win = chooseStartOption(Name)
+            else:
+                win = chooseFaxOption()
+        
+        if win == True:
+            print ('Congradulations! You left early without getting caught!')
+            print ('You Win!!!')
+        else:
+            print ('You couldnt leave early.....')
+            print ('You Lose!')    
         
         print ('Do you want to play again? (yes or no)')
         playAgain = raw_input()
