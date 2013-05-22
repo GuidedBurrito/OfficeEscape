@@ -41,12 +41,13 @@ def chooseDeskOption():
     print
     DeskOption = ''
     while DeskOption != 'Leave' and DeskOption != 'leave' and DeskOption != 'LEAVE' and DeskOption != 'Check' and DeskOption != 'check' and DeskOption != 'CHECK':
-        print ('Your ready to go, do you LEAVE your cubicle or stand up and CHECK? (Leave or Check)')
+        print ('With all your things in hand youre now ready to go.')
+        print ('Do you LEAVE your cubicle or stand up and CHECK? (Leave or Check)')
         print
         DeskOption = raw_input()
     return DeskOption
 
-def chooseHallOption():
+def chooseHallOption(Name):
     print
     print
     print
@@ -57,12 +58,13 @@ def chooseHallOption():
     print ('As you look around, you see all the other poor saps at their desks.')
     print ('Mindlessly droning on. Its a sad sight.')
     print ('As you turn to walk to the door your heart drops deep into your gut.....')
-    time.sleep(2)
+    time.sleep(5)
     print ('The boss is standing right next to you!')
-    print ('"Hey! What are you doing!?" he yells at you.')
+    print ('"Hey' + Name + '! What are you doing!?" he yells at you.')
     HallOption = ''
     while HallOption != 'Lie' and HallOption != 'LIE' and HallOption != 'lie'  and HallOption != 'Stretch' and HallOption != 'stretch' and HallOption != 'STRETCH':
-        print ('Do you LIE and tell that you have a doctors appointment or quickly pretend to STRETCH? (Lie or Stretch)')
+        print ('Do you LIE and tell that you have a doctors appointment')
+        print ('or quickly pretend to STRETCH? (Lie or Stretch)')
         print
         HallOption = raw_input()
     return HallOption
@@ -99,21 +101,21 @@ def chooseLieOption():
     print ('Because your a horrible liar.')
     time.sleep(3)
     print
-    print ('As you blather trip and stumble through your very poor lie,')
+    print ('As you blather, trip, and stumble through your very poor lie,')
     print ('the bosses expression goes from confused to angry.')
     print ('"Do you really think im going to believe that!?!?" he yells.')
     LieOption = ''
     while LieOption != 'yes' and LieOption != 'Yes' and LieOption != 'YES' and LieOption != 'no' and LieOption != 'No' and LieOption != 'NO':
-        print ('Do you say YES and hope he buys it or say NO and appologise?')
+        print ('Do you say YES and hope he buys it or say NO and appologise? (Yes or No)')
         print
         LieOption = raw_input()
     if LieOption == 'Yes' or LieOption == 'YES' or LieOption == 'yes':
         print
         print
-        print ('You try to say yes with all the sincarity you can, but like any rational human being,')
-        print ('the boss can tell you lying through your teeth. If the impending doom of your termination')
-        print ('wasnt bad enough, hes going to do it infront of the whole office.')
-        print ('And like a sharp axe coming down on your head he screams those dredfull words....')
+        print ('You try to say yes as sincierly as you can, but like any rational human being,')
+        print ('the boss can tell you lying through your teeth. If the impending doom of your,')
+        print ('job wasnt bad enough, hes going to do it infront of the whole office.')
+        print ('And like a sharp axe coming down on your head he screams those dredfull words...')
         print ('YOUR FIRED!!!')
         time.sleep(8)
         print
@@ -247,7 +249,7 @@ def main():
     while playAgain == 'yes' or playAgain == 'y' or playAgain == 'YES':
         DeskOption = chooseDeskOption()
         if DeskOption == 'Leave' or DeskOption == 'leave' or DeskOption == 'LEAVE':
-            HallOption = chooseHallOption()
+            HallOption = chooseHallOption(Name)
             if HallOption == 'Lie' or HallOption == 'lie' or HallOption == 'LIE':
                 win = chooseLieOption()
             else :

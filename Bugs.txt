@@ -1,8 +1,3 @@
-- Options for cubicle run over by 3 character spaces
-- shorten print lines in yes to lie
-- hall options go over at ST-
-- longer sleep on hall gut drop
-- Options in brakets for yes and no option when lie
 - shorten description of no option in lie
 - shorten options for stretch decision
 - shorten coffee option description
