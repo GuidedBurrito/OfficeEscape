@@ -139,7 +139,7 @@ def chooseStretchOption(Name):
     print ('As the boss slowly passes by your cubicle, he notices you stretching')
     print ('He asks "While your up ' + Name + ', can you get me a coffee?"')
     StretchOption = ''
-    while StetchOption != 'Coffee' and StetchOption != 'COFFEE' and StetchOption != 'coffee' and StetchOption != 'Early' and StetchOption != 'EARLY' and StetchOption != 'early': 
+    while StretchOption != 'Coffee' and StretchOption != 'COFFEE' and StretchOption != 'coffee' and StretchOption != 'Early' and StretchOption != 'EARLY' and StretchOption != 'early': 
         print ('Do you go get the boss a COFFEE or say youll go and start your weekend EARLY? (Coffee or Early)')
         print
         StretchOption = raw_input()
@@ -179,6 +179,7 @@ def chooseStartOption(Name):
     print ('Unfortunatly for you, the computer runs as if hamsters are powering it.')
     print ('As you pound at your keyboard in an atempt to get it to start faster, the boss comes in.')
     print ('"Whats going on with you computer ' + Name + '?')
+    StartOption = ''
     while StartOption != 'Crash' and StartOption != 'crash' and StartOption != 'CRASH' and StartOption != 'Update' and StartOption != 'update' and StartOption != 'UPDATE':
         print ('Do you tell your boss it was a compute CRASH or your preforming an UPDATE? (Crash or Update')
         print

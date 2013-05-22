@@ -1,0 +1,17 @@
+- Options for cubicle run over by 3 character spaces
+- shorten print lines in yes to lie
+- hall options go over at ST-
+- longer sleep on hall gut drop
+- Options in brakets for yes and no option when lie
+- shorten description of no option in lie
+- shorten options for stretch decision
+- shorten coffee option description
+- shorten description for early descision
+- shorten busted line in the spotter description
+- spelling in boot-up option description, add an R to compute
+- shorten description for boot-up options and descriptiom
+- shorten crash description so it matches the length of what the boss says
+- shorten each line by one word in the update description
+- shorten fax description so the last 2 line are the same length as the frst
+- shorten send option description so it matches the first line -3 characters
+- shorten the first line of the hope description so it matches the length of the 2nd
