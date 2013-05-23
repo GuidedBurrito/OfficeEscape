@@ -1,2 +1,0 @@
-- shorten send option description so it matches the first line -3 characters
-- shorten the first line of the hope description so it matches the length of the 2nd
